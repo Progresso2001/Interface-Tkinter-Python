@@ -6,7 +6,8 @@ janela.geometry("400x350")
 
 #Frame para centralizar o widget
 
-frame_central=tk.Frame(janela)
+frame_central=tk.Frame(janela,bg="lightblue",  
+highlightbackground="blue", highlightthickness=2)
 frame_central.pack(expand=True)
 
 #centralizar o Titulo no top
@@ -27,7 +28,6 @@ inserir_senha.grid(row=2, column=1, pady=5)
 
 
 #frame para botoes de radio 
-
 frame_radio=tk.Frame(frame_central)
 frame_radio.grid(row=3, column=0, columnspan=2, pady=5)
 var_radio=tk.StringVar()
@@ -41,12 +41,10 @@ radio_lembrar = tk.Radiobutton(frame_radio, text="Esquecer", variable=var_radio,
 radio_lembrar.pack(side="right", padx=10)
 
 #Botão Enviar centralizad
-
 botao_enviar=tk.Button(frame_central, text="Enviar", font=("Arial 10 bold"))
-botao_enviar.grid(row=4, column=0, columnspan=2, pady=(20, 10))
+botao_enviar.grid(row=4, column=0, columnspan=2, pady=(20, 10))  
 
 #centralizar a janela da tela
-
 janela.eval("tk::PlaceWindow . left")
 
-janela.mainloop()
+janela.mainloop() 
